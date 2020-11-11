@@ -3,4 +3,10 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
+  position 0.5713289195270195 0.20234565899915274 10
+}
+Background {
+  skyColor [
+    0.15 0.45 1
+  ]
 }
