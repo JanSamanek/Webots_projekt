@@ -3,43 +3,16 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.4384280332863775 -0.553828734040098 0.7078520982381711 2.4806897799329266
-  position -8.605497182253798 4.333709935584846 7.972637621476383
-}
-Background {
-  skyColor [
-    0.3 0.35 1
-  ]
-  backUrl [
-    "100"
-  ]
-  bottomUrl [
-    ""
-  ]
-  frontUrl [
-    ""
-  ]
-  leftUrl [
-    ""
-  ]
-  rightUrl [
-    ""
-  ]
-  topUrl [
-    ""
-    "TexturedBackground (PROTO)"
-    ""
-  ]
-  backIrradianceUrl [
-    ""
-  ]
-  rightIrradianceUrl [
-    ""
-  ]
+  orientation -0.41362381889627037 -0.8887514249192895 -0.1975759123617999 0.9863330819682163
+  position -6.011352724175838 4.2432082119845145 5.464496917497639
 }
 TexturedBackgroundLight {
   texture "dusk"
 }
 RectangleArena {
   wallThickness 0.03
+}
+TexturedBackground {
+}
+Pedestrian {
 }
