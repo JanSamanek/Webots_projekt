@@ -3,8 +3,13 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
+<<<<<<< Updated upstream
   orientation -5.407512861194335e-05 0.9723686231103023 0.2334507611177473 3.141142186371704
   position 0.02189293721930738 0.3883963480550184 -0.7193672144458192
+=======
+  orientation 0.2866224603051441 0.9256896318350106 0.24687298507894415 4.784402292267009
+  position -0.7425053195039536 0.6297970214821887 0.0169227318277482
+>>>>>>> Stashed changes
 }
 TexturedBackgroundLight {
   texture "dusk"
@@ -17,6 +22,7 @@ TexturedBackground {
 TinkerbotsBase {
   translation 0 0.04 0
   rotation 0 1 0 0
+<<<<<<< Updated upstream
   upSlot TinkerbotsCube {
   }
   downSlot TinkerbotsCube {
@@ -30,12 +36,27 @@ TinkerbotsBase {
         backSlot TinkerbotsAxle {
           endSlot TinkerbotsWheel {
           }
+=======
+  controller "my_controller"
+  leftSlot TinkerbotsCube {
+    leftSlot TinkerbotsMotor {
+      rotation 0 0 1 1.5707996938995747
+      name "front_left_motor"
+      frontSlot TinkerbotsAxle {
+        endSlot TinkerbotsWheel {
+>>>>>>> Stashed changes
         }
       }
     }
     rightSlot TinkerbotsMotor {
+<<<<<<< Updated upstream
       rotation 0 0 1 1.5708003061004252
       backSlot TinkerbotsAxle {
+=======
+      rotation 0 0 1 -1.5707996938995747
+      name "bsck_left_motor"
+      frontSlot TinkerbotsAxle {
+>>>>>>> Stashed changes
         endSlot TinkerbotsWheel {
         }
       }
@@ -43,18 +64,27 @@ TinkerbotsBase {
   }
   rightSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
-      rotation 0 0 1 -1.5707996938995747
-      backSlot TinkerbotsAxle {
+      rotation 0 0 1 1.5707996938995747
+      name "right_front_motor"
+      frontSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
       }
     }
+<<<<<<< Updated upstream
     rightSlot TinkerbotsCube {
       upSlot TinkerbotsMotor {
         rotation 0 0 1 -1.5707996938995747
         frontSlot TinkerbotsAxle {
           endSlot TinkerbotsWheel {
           }
+=======
+    rightSlot TinkerbotsMotor {
+      rotation 0 0 1 -1.4399003061004252
+      name "right_back_motor"
+      frontSlot TinkerbotsAxle {
+        endSlot TinkerbotsWheel {
+>>>>>>> Stashed changes
         }
       }
     }
