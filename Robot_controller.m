@@ -22,6 +22,8 @@ right_front_motor = wb_robot_get_device('right_front_motor');
 left_back_motor = wb_robot_get_device('left_back_motor');
 right_back_motor = wb_robot_get_device('right_back_motor');
 
+d_sensor = wb_robot_get_device('d_sensor');
+
 
 wb_motor_set_position(left_front_motor, inf);
 wb_motor_set_velocity(left_front_motor, 1);
@@ -35,11 +37,17 @@ wb_motor_set_velocity(left_back_motor, 1);
 wb_motor_set_position(right_back_motor, inf);
 wb_motor_set_velocity(right_back_motor, 1);
 
+wb_distance_sensor_enable(d_sensor, TIME_STEP);
 % main loop:
 % perform simulation steps of TIME_STEP milliseconds
 % and leave the loop when Webots signals the termination
 
 while wb_robot_step(TIME_STEP) ~= -1
+
+    distance = wb_distance_sensor_get_value(d_sensor);
+
+    disp(distance)
+    wb_console_print(sprintf('a', distance), WB_STDOUT);
 
 
   % read the sensors, e.g.:
