@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.02318333015786503 -0.9211663041619826 -0.38847802161685424 3.251427588725588
-  position 0.26229104414342597 2.014988471519682 -1.7437127012251654
+  orientation 0.007580522152480573 0.9479128232109914 0.31843965719750367 3.1867155190252463
+  position 0.28150162784114363 1.4312131408475748 -1.6041780106667136
 }
 TexturedBackgroundLight {
   texture "dusk"
@@ -12,6 +12,16 @@ TexturedBackgroundLight {
 RectangleArena {
   floorSize 2 2
   wallThickness 0.03
+}
+Wall {
+  translation 0.67 0 0.08
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(1)"
+  size 1.1 0.2 0.05
+}
+Wall {
+  translation 0.42 0 0.65
+  size 0.5 0.2 0.05
 }
 TexturedBackground {
 }
