@@ -57,27 +57,24 @@ while wb_robot_step(TIME_STEP) ~= -1
     wb_console_print(sprintf('%u\n',distance), WB_STDOUT);
     disp(distance_F_R)
     wb_console_print(sprintf('%u\n',distance_F_R), WB_STDOUT);
+    disp(distance_F_L)
+    wb_console_print(sprintf('%u\n',distance_F_L), WB_STDOUT);
 
 
      if distance > 80
-     
-      
-       
-      
-      
-      if  distance_F_L > 995
-        
+      if  distance_F_L > 995 && distance_F_R > 995 
            vpred
         else
-       
+           if distance_F_L < 995        
               right
-        end     
-               
+                
+           elseif distance_F_R < 995       
+              left
+           end
+        end
       else
-          
-             right
-             
-       end
+           left   
+      end
        
       %  if  distance_F_R > 950
       
@@ -164,3 +161,21 @@ right_back_motor = wb_robot_get_device('right_back_motor');
   wb_motor_set_velocity(right_back_motor, -5);
 end
 
+function left
+left_front_motor = wb_robot_get_device('left_front_motor');
+right_front_motor = wb_robot_get_device('right_front_motor');
+left_back_motor = wb_robot_get_device('left_back_motor');
+right_back_motor = wb_robot_get_device('right_back_motor');
+
+  wb_motor_set_position(left_front_motor, inf);
+  wb_motor_set_velocity(left_front_motor, -5);
+
+  wb_motor_set_position(right_front_motor, inf);
+  wb_motor_set_velocity(right_front_motor, 5);
+
+  wb_motor_set_position(left_back_motor, inf);
+  wb_motor_set_velocity(left_back_motor, -5);
+
+  wb_motor_set_position(right_back_motor, inf);
+  wb_motor_set_velocity(right_back_motor, 5);
+end
