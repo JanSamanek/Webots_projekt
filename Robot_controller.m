@@ -27,6 +27,8 @@ d_sensor = wb_robot_get_device('d_sensor');
 d_sensor_F_L = wb_robot_get_device('d_sensor_F_L')
 d_sensor_F_R = wb_robot_get_device('d_sensor_F_R')
 
+%lidar = wb_robot_get_device('lidar')
+
 
 %wb_motor_set_position(left_front_motor, inf);
 %wb_motor_set_velocity(left_front_motor, 5);
@@ -43,6 +45,10 @@ d_sensor_F_R = wb_robot_get_device('d_sensor_F_R')
 wb_distance_sensor_enable(d_sensor, TIME_STEP);
 wb_distance_sensor_enable(d_sensor_F_L, TIME_STEP);
 wb_distance_sensor_enable(d_sensor_F_R, TIME_STEP);
+
+%period = wb_lidar_get_sampling_period(lidar)
+%wb_lidar_enable(lidar, TIME_STEP);
+%wb_gps_enable(gps, TIME_STEP);
 % main loop:
 % perform simulation steps of TIME_STEP milliseconds
 % and leave the loop when Webots signals the termination
@@ -52,32 +58,37 @@ while wb_robot_step(TIME_STEP) ~= -1
     distance = wb_distance_sensor_get_value(d_sensor);
     distance_F_L = wb_distance_sensor_get_value(d_sensor_F_L);
     distance_F_R = wb_distance_sensor_get_value(d_sensor_F_R);
+    
+    
+  %    range = wb_lidar_get_range_image(lidar)
+    %min_range = wb_lidar_get_min_range(lidar)
+    %disp(range)
+  %  disp(period)
 
-    disp(distance)
+    
+  %  wb_console_print(sprintf('%u\n',range), WB_STDOUT);
+   % disp(distance)
     wb_console_print(sprintf('%u\n',distance), WB_STDOUT);
-    disp(distance_F_R)
+   % disp(distance_F_R)
     wb_console_print(sprintf('%u\n',distance_F_R), WB_STDOUT);
+    %disp(distance_F_L)
+    wb_console_print(sprintf('%u\n',distance_F_L), WB_STDOUT);
 
 
      if distance > 80
-     
-      
-       
-      
-      
-      if  distance_F_L > 995
-        
+      if  distance_F_L > 995 && distance_F_R > 995 
            vpred
         else
-       
+           if distance_F_L < 995        
               right
-        end     
-               
+                
+           elseif distance_F_R < 995       
+              left
+           end
+        end
       else
-          
-             right
-             
-       end
+           left   
+      end
        
       %  if  distance_F_R > 950
       
@@ -164,3 +175,21 @@ right_back_motor = wb_robot_get_device('right_back_motor');
   wb_motor_set_velocity(right_back_motor, -5);
 end
 
+function left
+left_front_motor = wb_robot_get_device('left_front_motor');
+right_front_motor = wb_robot_get_device('right_front_motor');
+left_back_motor = wb_robot_get_device('left_back_motor');
+right_back_motor = wb_robot_get_device('right_back_motor');
+
+  wb_motor_set_position(left_front_motor, inf);
+  wb_motor_set_velocity(left_front_motor, -5);
+
+  wb_motor_set_position(right_front_motor, inf);
+  wb_motor_set_velocity(right_front_motor, 5);
+
+  wb_motor_set_position(left_back_motor, inf);
+  wb_motor_set_velocity(left_back_motor, -5);
+
+  wb_motor_set_position(right_back_motor, inf);
+  wb_motor_set_velocity(right_back_motor, 5);
+end
