@@ -27,6 +27,8 @@ d_sensor = wb_robot_get_device('d_sensor');
 d_sensor_F_L = wb_robot_get_device('d_sensor_F_L')
 d_sensor_F_R = wb_robot_get_device('d_sensor_F_R')
 
+%lidar = wb_robot_get_device('lidar')
+
 
 %wb_motor_set_position(left_front_motor, inf);
 %wb_motor_set_velocity(left_front_motor, 5);
@@ -43,6 +45,10 @@ d_sensor_F_R = wb_robot_get_device('d_sensor_F_R')
 wb_distance_sensor_enable(d_sensor, TIME_STEP);
 wb_distance_sensor_enable(d_sensor_F_L, TIME_STEP);
 wb_distance_sensor_enable(d_sensor_F_R, TIME_STEP);
+
+%period = wb_lidar_get_sampling_period(lidar)
+%wb_lidar_enable(lidar, TIME_STEP);
+%wb_gps_enable(gps, TIME_STEP);
 % main loop:
 % perform simulation steps of TIME_STEP milliseconds
 % and leave the loop when Webots signals the termination
@@ -52,12 +58,20 @@ while wb_robot_step(TIME_STEP) ~= -1
     distance = wb_distance_sensor_get_value(d_sensor);
     distance_F_L = wb_distance_sensor_get_value(d_sensor_F_L);
     distance_F_R = wb_distance_sensor_get_value(d_sensor_F_R);
+    
+    
+  %    range = wb_lidar_get_range_image(lidar)
+    %min_range = wb_lidar_get_min_range(lidar)
+    %disp(range)
+  %  disp(period)
 
-    disp(distance)
+    
+  %  wb_console_print(sprintf('%u\n',range), WB_STDOUT);
+   % disp(distance)
     wb_console_print(sprintf('%u\n',distance), WB_STDOUT);
-    disp(distance_F_R)
+   % disp(distance_F_R)
     wb_console_print(sprintf('%u\n',distance_F_R), WB_STDOUT);
-    disp(distance_F_L)
+    %disp(distance_F_L)
     wb_console_print(sprintf('%u\n',distance_F_L), WB_STDOUT);
 
 
