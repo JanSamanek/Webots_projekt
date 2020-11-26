@@ -3,14 +3,14 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.007580522152480573 0.9479128232109914 0.31843965719750367 3.1867155190252463
-  position 0.28150162784114363 1.4312131408475748 -1.6041780106667136
+  orientation 0.02097871777926267 0.9028021380166371 0.4295441688498717 3.229720362790649
+  position -0.1688944170927604 3.3178144745907834 -2.5588000526579178
 }
 TexturedBackgroundLight {
   texture "dusk"
 }
 RectangleArena {
-  floorSize 2 2
+  floorSize 5 5
   wallThickness 0.03
 }
 Wall {
@@ -18,10 +18,34 @@ Wall {
   rotation 0 1 0 -1.5707996938995747
   name "wall(1)"
   size 1.1 0.2 0.05
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 1 2.4
+    }
+  }
+}
+Wall {
+  translation 0.31 0 -0.430001
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(3)"
+  size 0.5 0.2 0.05
 }
 Wall {
   translation 0.42 0 0.65
   size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.09 0 0.3
+  name "wall(2)"
+  size 0.5 0.2 0.05
+  appearance Roughcast {
+    colorOverride 0.5 0.8 0.8
+    textureTransform TextureTransform {
+      scale 1 2.4
+    }
+    IBLStrength 0
+  }
 }
 TexturedBackground {
 }
@@ -73,6 +97,9 @@ TinkerbotsBase {
     }
   }
   extensionSlot [
+    GPS {
+      translation 0 0.01 0
+    }
     DistanceSensor {
       translation 1.24963e-07 0.04 0.06
       rotation 0 1 0 -0.5235903061004253
