@@ -3,21 +3,29 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.02097871777926267 0.9028021380166371 0.4295441688498717 3.229720362790649
-  position -0.1688944170927604 3.3178144745907834 -2.5588000526579178
+  orientation -0.005029306999122081 -0.9709458853985402 -0.23924630341711348 3.100776917416576
+  position 0.17146285139046463 1.68833504268489 -2.24543422840304
 }
 TexturedBackgroundLight {
   texture "dusk"
 }
 RectangleArena {
   floorSize 5 5
+  floorTileSize 5 5
+  floorAppearance Parquetry {
+    type "dark strip"
+  }
   wallThickness 0.03
 }
 Wall {
-  translation 0.67 0 0.08
+  translation -0.53 0 0.309999
   rotation 0 1 0 -1.5707996938995747
-  name "wall(1)"
-  size 1.1 0.2 0.05
+  name "wall(3)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.07 0 0.65
+  size 0.5 0.2 0.05
   appearance Roughcast {
     colorOverride 1 0 0
     textureTransform TextureTransform {
@@ -25,29 +33,12 @@ Wall {
     }
   }
 }
-Wall {
-  translation 0.31 0 -0.430001
-  rotation 0 1 0 -1.5707996938995747
-  name "wall(3)"
-  size 0.5 0.2 0.05
-}
-Wall {
-  translation 0.42 0 0.65
-  size 0.5 0.2 0.05
-}
-Wall {
-  translation 0.09 0 0.3
-  name "wall(2)"
-  size 0.5 0.2 0.05
-  appearance Roughcast {
-    colorOverride 0.5 0.8 0.8
-    textureTransform TextureTransform {
-      scale 1 2.4
-    }
-    IBLStrength 0
-  }
-}
 TexturedBackground {
+  texture "mars"
+  luminosity 0.3
+  skyColor [
+    0 0 1
+  ]
 }
 TinkerbotsBase {
   translation 0 0.04 0
@@ -97,17 +88,19 @@ TinkerbotsBase {
     }
   }
   extensionSlot [
-    GPS {
-      translation 0 0.01 0
+    LightSensor {
+      translation 6.11772e-08 0 0.06
+      rotation 0 1 0 -1.5707953071795862
+      colorFilter 1 1 0
     }
     DistanceSensor {
       translation 1.24963e-07 0.04 0.06
-      rotation 0 1 0 -0.5235903061004253
+      rotation 0 -1 0 0.261797
       name "d_sensor_F_L"
     }
     DistanceSensor {
       translation -0.000258068 0.04 0.0599984
-      rotation 0 1 0 -2.65
+      rotation 0 -1 0 2.9118
       name "d_sensor_F_R"
     }
   ]
