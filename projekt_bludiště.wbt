@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.0304062784706731 -0.7504074724766415 -0.6602757632086629 3.072506299776742
-  position 0.44376304247397924 2.844515998493211 0.2489739279739694
+  orientation -0.10356640742164307 -0.7905861390617479 -0.6035292503078975 2.9972912194709878
+  position 0.5392919445938016 6.133989584307573 -1.2966627617155773
 }
 TexturedBackgroundLight {
   texture "dusk"
@@ -18,31 +18,31 @@ RectangleArena {
   wallThickness 0.03
 }
 Wall {
-  translation 0.17 0 0.160001
+  translation 0.17 0 0.100001
   rotation 0 1 0 -1.5707996938995747
   name "wall(1)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.64 0 0.070001
+  translation 0.169999 0 1.38
   rotation 0 1 0 -1.5707996938995747
   name "wall(10)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.64 0 -0.419999
+  translation 0.579998 0 1.65
   rotation 0 1 0 -1.5707996938995747
   name "wall(12)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.17 0 0.95
+  translation 0.17 0 0.93
   rotation 0 1 0 -1.5707996938995747
   name "wall(2)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation -0.53 0 0.309999
+  translation -0.19 0 0.449999
   rotation 0 1 0 -1.5707996938995747
   name "wall(3)"
   size 0.5 0.2 0.05
@@ -54,7 +54,7 @@ Wall {
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 1.16 0 0.1
+  translation 0.569999 0 0.62
   rotation 0 1 0 -1.5707996938995747
   name "wall(8)"
   size 0.5 0.2 0.05
@@ -66,7 +66,8 @@ Wall {
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.94 0 1.29
+  translation 0.94 0 1.19
+  rotation 0 1 0 1.5708
   size 0.5 0.2 0.05
   appearance Roughcast {
     colorOverride 1 0 0
@@ -76,27 +77,27 @@ Wall {
   }
 }
 Wall {
-  translation -0.06 0 1.29
+  translation 0.81 0 1.42
   name "wall(5)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.42 0 0.73
+  translation -0.06 0 0.66
   name "wall(6)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.42 0 0.39
+  translation 0.42 0 0.34
   name "wall(11)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.92 0 0.78
+  translation 0.8 0 0.91
   name "wall(7)"
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 1.44 0 -0.14
+  translation 0.3 0 1.94
   name "wall(15)"
   size 0.5 0.2 0.05
 }
@@ -179,6 +180,7 @@ TinkerbotsBase {
   extensionSlot [
     DistanceSensor {
       translation 0.06 0 0
+      scale 5 5 5
       name "L_side_s"
     }
     DistanceSensor {
