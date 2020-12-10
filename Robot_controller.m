@@ -22,6 +22,8 @@
   wb_camera_enable(camera, TIME_STEP);
   
   foto = 0;
+  dira = 0;
+  k = 1;
 
 while wb_robot_step(TIME_STEP) ~= -1
    %write = true;
@@ -36,13 +38,15 @@ while wb_robot_step(TIME_STEP) ~= -1
     
   %  wb_console_print(sprintf('%u\n',range), WB_STDOUT);
    % disp(distance)
-    wb_console_print(sprintf('%u\n',distance), WB_STDOUT);
+%    wb_console_print(sprintf('%u\n',distance), WB_STDOUT);
    % disp(distance_F_R)
-    wb_console_print(sprintf('%u\n',distance_F_R), WB_STDOUT);
+%    wb_console_print(sprintf('%u\n',distance_F_R), WB_STDOUT);
     %disp(distance_F_L)
-    wb_console_print(sprintf('%u\n',distance_F_L), WB_STDOUT);
-    wb_console_print(sprintf('%u\n',data_l_sensor), WB_STDOUT);
-    
+%    wb_console_print(sprintf('%u\n',distance_F_L), WB_STDOUT);
+%    wb_console_print(sprintf('%u\n',data_l_sensor), WB_STDOUT);
+    wb_console_print(sprintf('%u\n',distance_L_side), WB_STDOUT);
+    wb_console_print(sprintf('%u\n',dira), WB_STDOUT);
+    wb_console_print(sprintf('%u\n',k), WB_STDOUT);
 %motor settings
   left_front_motor = wb_robot_get_device('left_front_motor');
   right_front_motor = wb_robot_get_device('right_front_motor');
@@ -55,22 +59,22 @@ while wb_robot_step(TIME_STEP) ~= -1
   wb_motor_set_position(left_back_motor, inf);
   wb_motor_set_position(right_back_motor, inf);
  
- pohled = 'front';
+% pohled = 'front';
+ % orientace = 'stop';
 
+%if foto == 0  
 
-if foto == 0  
+%success = wb_camera_save_image(camera, 'foto.jpg', 1);
+%foto = 1;
+%end
 
-success = wb_camera_save_image(CAM, 'foto.jpg', 1);
-foto = 1;
-end
+%shoda = compare_picture
+%if shoda == 0
+ % orientace = 'left';
+ % else
 
-shoda = compare_picture
-if shoda == 0
-  orientace = 'left';
-  else
-
- orientace = 'forward';
-end
+% orientace = 'forward';
+%end
 %wb_console_print(sprintf('%u\n',smer), WB_STDOUT);
 
 
@@ -89,18 +93,37 @@ end
 
   %orientace = smer;
   
- % pohled = 'forward';
+ pohled = 'front';
  %end
  
   % wb_distance_sensor_enable(L_side_s, TIME_STEP);
  
  
-
+%dira = 0;
 
 
 %dira = test_leva(distance_L_side)
 
-%if dira == 1
+%if dira == 0
+%if foto == 0
+%dira = test_leva(distance_L_side)
+
+%end
+
+
+
+smer = rizeni (distance, distance_F_L, distance_F_R)
+
+orientace = smer;
+
+%bool turn90ccw()
+
+
+%else
+ % [shoda,pohled,orientace] = fotak (camera)
+    
+%end   
+  
 %pohled = 'rotation';
  %if distance > 55 && distance_F_L > 995 
 % && distance < 75
@@ -168,10 +191,10 @@ case 'vpravo'
   wb_motor_set_velocity(right_back_motor, 1);
   
 case 'vlevo'
-  wb_motor_set_velocity(left_front_motor, 1);
-  wb_motor_set_velocity(right_front_motor, 5);
-  wb_motor_set_velocity(left_back_motor, 1);
-  wb_motor_set_velocity(right_back_motor, 5);
+  wb_motor_set_velocity(left_front_motor, -2);
+  wb_motor_set_velocity(right_front_motor, 10);
+  wb_motor_set_velocity(left_back_motor, -2);
+  wb_motor_set_velocity(right_back_motor, 10);
 end
 
 switch pohled
