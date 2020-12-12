@@ -3,15 +3,13 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.999999191035088 0.0011397594641641277 0.0005646924235826628 0.9200006436142659
-  position 0.49434221298724856 3.3220513079534055 3.2634826667202987
+  orientation -0.0358046388765445 -0.7603237411511545 -0.6485567334295685 3.1750363987043397
+  position 0.4196078016361414 4.033327617854297 0.2861772435655223
 }
 TexturedBackgroundLight {
   texture "dusk"
-  luminosity 3
 }
 RectangleArena {
-  translation -1.43 0 0.94
   floorSize 5 5
   floorTileSize 5 5
   floorAppearance Parquetry {
@@ -20,96 +18,142 @@ RectangleArena {
   wallThickness 0.03
 }
 Wall {
-  translation -0.4 0 -0.090001
-  rotation 0 1 0 -1.5707996938995747
-  name "wall(3)"
-  size 0.9 0.2 0.05
-}
-Wall {
-  translation 0.528603 0 1.58307
-  rotation 0 -1 0 1.5708
-  name "wall(10)"
-  size 0.47 0.2 0.05
-}
-Wall {
-  translation 0.098603 0 2.31307
-  rotation 0 -1 0 1.5708
-  name "wall(18)"
-  size 1 0.2 0.05
-}
-Wall {
-  translation 0.53 0 1.05
-  rotation 0 1 0 -1.5707996938995747
-  name "wall(7)"
-  size 0.6 0.2 0.05
-  appearance Roughcast {
-    colorOverride 0 1 0
-    textureTransform TextureTransform {
-      scale 1 2.4
-    }
-  }
-}
-Wall {
-  translation -0.420001 0 2.08
-  rotation 0 1 0 -1.5707996938995747
-  name "wall(17)"
-  size 0.5 0.2 0.05
-  appearance Roughcast {
-    colorOverride 0 1 0
-    textureTransform TextureTransform {
-      scale 1 2.4
-    }
-  }
-}
-Wall {
-  translation 0.0300003 0 -0.100001
+  translation 0.2 0 0.080001
   rotation 0 1 0 -1.5707996938995747
   name "wall(1)"
-  size 1.8 0.2 0.05
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation -0.81 0 0.1
+  translation -0.18 0 0.190001
   rotation 0 1 0 -1.5707996938995747
-  name "wall(4)"
-  size 1.4 0.2 0.05
+  name "wall(16)"
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.53 0 0.05
+  translation 0.079999 0 1.32
   rotation 0 1 0 -1.5707996938995747
-  name "wall(8)"
-  size 1.4 0.2 0.05
+  name "wall(10)"
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation -2.16 0 1.15999
-  rotation 0 1 0 -1.5707996938995747
-  name "wall(15)"
-  size 2.3 0.2 0.05
-}
-Wall {
-  translation -1.21 0 0.16
-  rotation 0 1 0 -1.5707996938995747
-  name "wall(5)"
-  size 2.3 0.2 0.05
-}
-Wall {
-  translation -1.67 0 1.12
+  translation 0.479998 0 1.65
   rotation 0 1 0 -1.5707996938995747
   name "wall(12)"
-  size 1.3 0.2 0.05
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation -0.59 0 -0.97
-  size 1.2 0.2 0.05
+  translation 0.479998 0 1.3
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(23)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.57834 0 1.55527
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(22)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.21 0 1.14
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(18)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.849998 0 1.14
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(19)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.08 0 0.93
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(2)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -0.180622 0 0.606239
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(3)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.21 0 1.07
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(4)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.85 0 0.92
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(8)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.21 0 0.57
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(14)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -0.41 0 1.27
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(30)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -1.32 0 2.23
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(32)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -0.45 0 2.16
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(31)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -0.839999 0 1.75
+  rotation 0 1 0 1.5708
+  size 0.5 0.2 0.05
   appearance Roughcast {
-    colorOverride 1 0 0
+    colorOverride 0 1 0
     textureTransform TextureTransform {
       scale 1 2.4
     }
   }
 }
 Wall {
-  translation -1.49 0 0.03
-  name "wall(13)"
+  translation 0.12 0 0.68
+  name "wall(5)"
+  size 0.5 0.1 0.03
+}
+Wall {
+  translation 1.01 0 1.73
+  name "wall(21)"
+  size 0.5 0.1 0.03
+}
+Wall {
+  translation -0.82 0 1.74
+  rotation 0 1 0 1.5708
+  name "wall(29)"
+  size 0.5 0.1 0.03
+}
+Wall {
+  translation 0.11 0 0.7
+  name "wall(6)"
+  size 0.5 0.2 0.05
+  appearance Roughcast {
+    colorOverride 0 0 1
+    textureTransform TextureTransform {
+      scale 1 2.4
+    }
+  }
+}
+Wall {
+  translation 1 0 1.75
+  name "wall(20)"
   size 0.5 0.2 0.05
   appearance Roughcast {
     colorOverride 1 0 0
@@ -119,52 +163,86 @@ Wall {
   }
 }
 Wall {
-  translation -1.94 0 0.03
-  name "wall(14)"
-  size 0.4 0.2 0.05
-}
-Wall {
-  translation -0.39 0 0.83
-  name "wall(2)"
-  size 0.9 0.2 0.05
-}
-Wall {
-  translation -0.59 0 1.34
-  name "wall(6)"
-  size 1.3 0.2 0.05
-}
-Wall {
-  translation -0.59 0 1.8
+  translation 0.43 0 0.31
   name "wall(11)"
-  size 2.2 0.2 0.05
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation -1.49 0 2.33
-  name "wall(16)"
-  size 1.4 0.2 0.05
+  translation -0.64 0 0.99
+  name "wall(17)"
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation -1.27 0 2.84
-  name "wall(19)"
-  size 2.8 0.2 0.05
+  translation 0.6 0 0.69
+  name "wall(7)"
+  size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.31 0 -0.68
+  translation 0.71 0 1.77
+  name "wall(25)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.34 0 1.77
+  name "wall(26)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.27 0 1.93
+  name "wall(24)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -0.23 0 1.93
+  name "wall(27)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation -0.19 0 1.54
+  name "wall(28)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.92 0 0.31
+  name "wall(15)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 0.92 0 -0.64
   name "wall(9)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.4 0 -0.64
+  name "wall(13)"
   size 0.5 0.2 0.05
 }
 TexturedBackground {
   texture "mars"
-  luminosity 0.1
+  luminosity 0.3
+  skyColor [
+    0 0 1
+  ]
 }
 TinkerbotsBase {
-  translation -0.2 0.04 0.42
-  rotation 0 1 0 0
+  translation 0 0.04 0
   controller "Robot_controller"
   upSlot TinkerbotsCube {
     frontSlot TinkerbotsDistanceSensor {
       rotation 0 0 1 -3.141592653589793
       name "d_sensor"
+      upSlot TinkerbotsTwister {
+        slot Slot {
+          endPoint Camera {
+            translation 0 0.0100001 -0.00999996
+            rotation 1 0 0 1.5708
+            fieldOfView 0.05
+          }
+        }
+        ASlot TinkerbotsCubieBoxWithRoundSlots {
+          rotation 0 0 1 -1.5708
+        }
+      }
     }
   }
   downSlot TinkerbotsCube {
@@ -206,23 +284,42 @@ TinkerbotsBase {
     }
   }
   extensionSlot [
-    Pen {
-      inkColor 1 1 1
-      inkDensity 1
-    }
-    LightSensor {
-      translation 6.11772e-08 0 0.06
-      rotation 0 1 0 -1.5707953071795862
+    DistanceSensor {
+      translation 0.127614 0 0.0681174
+      rotation 0 1 0 -0.2617996938995747
+      scale 3 3 3
+      name "L_side_s"
+      recognitionColors [
+        0 0 0
+      ]
     }
     DistanceSensor {
-      translation 1.24963e-07 0.04 0.06
-      rotation 0 -1 0 0.261797
+      translation -0.12759 0 0.0681174
+      rotation 0 1 0 -2.8797903061004253
+      scale 3 3 3
+      name "R_side_s"
+      rotationStep 0.261842
+      recognitionColors [
+        0 0 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.00707122 0.04 0.0670711
+      rotation 0 -1 0 0.7853966938995747
+      scale 2 2 2
       name "d_sensor_F_L"
+      recognitionColors [
+        0 0 0
+      ]
     }
     DistanceSensor {
-      translation -0.000258068 0.04 0.0599984
-      rotation 0 -1 0 2.9118
+      translation -0.00755178 0.04 0.0668396
+      rotation 0 -1 0 2.3882003061004253
+      scale 2 2 2
       name "d_sensor_F_R"
+      recognitionColors [
+        0 0 0
+      ]
     }
   ]
 }
