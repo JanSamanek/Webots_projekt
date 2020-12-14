@@ -7,7 +7,7 @@ maximizedDockId: -1
 centralWidgetVisible: 1
 projectionMode: ORTHOGRAPHIC
 renderingMode: PLAIN
-orthographicViewHeight: 1.62568
+orthographicViewHeight: 2.32071
 textFiles: 0 "controllers/Robot_controller/Robot_controller.m"
 globalOptionalRendering: LightSensorRays::PenPaintingRays::LightPositions::CameraFrustums
 consoles: Console:All:All
