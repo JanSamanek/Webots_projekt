@@ -37,18 +37,7 @@ while wb_robot_step(TIME_STEP) ~= -1
     distance_F_R = wb_distance_sensor_get_value(d_sensor_F_R);
     distance_L_side = wb_distance_sensor_get_value(L_side_s);
     distance_R_side = wb_distance_sensor_get_value(R_side_s);
-    
-  %  wb_console_print(sprintf('%u\n',range), WB_STDOUT);
-   % disp(distance)
-  %  wb_console_print(sprintf('%u\n',distance), WB_STDOUT);
-   % disp(distance_F_R)
-%    wb_console_print(sprintf('%u\n',distance_F_R), WB_STDOUT);
-    %disp(distance_F_L)
-%    wb_console_print(sprintf('%u\n',distance_F_L), WB_STDOUT);
-%    wb_console_print(sprintf('%u\n',data_l_sensor), WB_STDOUT);
-%    wb_console_print(sprintf('%u\n',distance_L_side), WB_STDOUT);
-   wb_console_print(sprintf('%u\n',dira), WB_STDOUT);
-   % wb_console_print(sprintf('%u\n', foto), WB_STDOUT);
+
 %motor settings
   left_front_motor = wb_robot_get_device('left_front_motor');
   right_front_motor = wb_robot_get_device('right_front_motor');
@@ -68,25 +57,17 @@ if dira == 0
 
 dira = test(distance_L_side, distance_R_side)
 
-
-
-
 smer = rizeni (distance, distance_F_L, distance_F_R, dira, barva)
 
 orientace = smer;
-
-
-
 
 else
 
 if dira == 1 
 
-
  orientace = 'vlevo';
  dira = 0;
 
- 
  elseif dira == 2
  orientace = 'vpravo';
  dira = 0;
@@ -105,18 +86,18 @@ end
             foto = 1;
             barva = barva_foto
         end
-end        
-        if foto == 1 && distance > 125
+ end  
+
+if foto == 1 && distance > 125
             foto = 0;
             pohled = 'front';
-        end
-    if foto == 1 && barva == 3
+end
+
+if foto == 1 && barva == 3
       pohled = 'rotation';
       
-    end
+end
 
-wb_console_print(sprintf('%u\n', barva), WB_STDOUT);
-% 
 % orientation controler
 switch orientace
 case 'forward'
