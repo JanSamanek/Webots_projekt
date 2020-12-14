@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.0358046388765445 -0.7603237411511545 -0.6485567334295685 3.1750363987043397
-  position 0.4196078016361414 4.033327617854297 0.2861772435655223
+  orientation 0.05545825053364947 -0.756154254728281 -0.6520392054961609 3.3874929279152113
+  position 0.6065277775653931 4.227958167061542 0.21218074103459128
 }
 TexturedBackgroundLight {
   texture "dusk"
@@ -18,7 +18,7 @@ RectangleArena {
   wallThickness 0.03
 }
 Wall {
-  translation 0.2 0 0.080001
+  translation 0.22 0 0.070001
   rotation 0 1 0 -1.5707996938995747
   name "wall(1)"
   size 0.5 0.2 0.05
@@ -125,7 +125,7 @@ Wall {
   }
 }
 Wall {
-  translation 0.12 0 0.68
+  translation 0.09 0 0.68
   name "wall(5)"
   size 0.5 0.1 0.03
 }
@@ -141,7 +141,7 @@ Wall {
   size 0.5 0.1 0.03
 }
 Wall {
-  translation 0.11 0 0.7
+  translation 0.09 0 0.7
   name "wall(6)"
   size 0.5 0.2 0.05
   appearance Roughcast {
@@ -163,7 +163,7 @@ Wall {
   }
 }
 Wall {
-  translation 0.43 0 0.31
+  translation 0.45 0 0.3
   name "wall(11)"
   size 0.5 0.2 0.05
 }
@@ -173,7 +173,7 @@ Wall {
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.6 0 0.69
+  translation 0.59 0 0.69
   name "wall(7)"
   size 0.5 0.2 0.05
 }
@@ -203,7 +203,7 @@ Wall {
   size 0.5 0.2 0.05
 }
 Wall {
-  translation 0.92 0 0.31
+  translation 0.92 0 0.3
   name "wall(15)"
   size 0.5 0.2 0.05
 }
@@ -305,7 +305,7 @@ TinkerbotsBase {
     }
     DistanceSensor {
       translation 0.00707122 0.04 0.0670711
-      rotation 0 -1 0 0.7853966938995747
+      rotation 0 -1 0 0.7853973061004254
       scale 2 2 2
       name "d_sensor_F_L"
       recognitionColors [
@@ -314,7 +314,7 @@ TinkerbotsBase {
     }
     DistanceSensor {
       translation -0.00755178 0.04 0.0668396
-      rotation 0 -1 0 2.3882003061004253
+      rotation 0 -1 0 2.3881996938995744
       scale 2 2 2
       name "d_sensor_F_R"
       recognitionColors [
