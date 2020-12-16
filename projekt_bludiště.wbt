@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.43106128805156285 0.7437624180607179 0.5108851450412326 2.0207274021951114
-  position 2.85823800728029 4.0626538791196225 1.2863000820634545
+  orientation -0.4242800036058303 0.8002889649149058 0.42370278636759706 1.7904778452449108
+  position 4.668703265268713 6.018523031268831 1.0008938783432544
 }
 TexturedBackgroundLight {
   texture "dusk"
@@ -26,70 +26,22 @@ Wall {
   size 0.9 0.2 0.05
 }
 Wall {
-  translation 0.548603 0 1.58307
+  translation 0.538603 0 1.58307
   rotation 0 -1 0 1.5708
   name "wall(10)"
   size 0.47 0.2 0.05
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 1 2.4
+    }
+  }
 }
 Wall {
-  translation 0.388603 0 2.23307
+  translation -0.441397 0 2.12307
   rotation 0 -1 0 1.5708
   name "wall(19)"
-  size 0.8 0.2 0.05
-}
-Wall {
-  translation 0.928603 0 0.80307
-  rotation 0 -1 0 1.5708
-  name "wall(8)"
-  size 0.9 0.2 0.05
-}
-Wall {
-  translation 1.3286 0 0.89307
-  rotation 0 -1 0 1.5708
-  name "wall(21)"
-  size 1.1 0.2 0.05
-}
-Wall {
-  translation 0.55 0 1.05
-  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
-  name "wall(7)"
   size 0.6 0.2 0.05
-}
-Wall {
-  translation 1.33 1.24089e-06 2.24
-  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
-  name "wall(18)"
-  size 0.8 0.2 0.05
-}
-Wall {
-  translation 0.319999 0 1.8
-  rotation 0 -1 0 3.37201e-06
-  name "wall(17)"
-  size 0.4 0.2 0.05
-  appearance Roughcast {
-    colorOverride 0 1 0
-    textureTransform TextureTransform {
-      scale 1 2.4
-    }
-  }
-}
-Wall {
-  translation 1.16 0 0.32
-  rotation 0 -1 0 3.37201e-06
-  name "wall(15)"
-  size 0.4 0.2 0.05
-  appearance Roughcast {
-    colorOverride 0 1 0
-    textureTransform TextureTransform {
-      scale 1 2.4
-    }
-  }
-}
-Wall {
-  translation 0.86 0 2.67
-  rotation 0 -1 0 3.37201e-06
-  name "wall(16)"
-  size 1 0.2 0.05
   appearance Roughcast {
     colorOverride 0 0 1
     textureTransform TextureTransform {
@@ -98,9 +50,153 @@ Wall {
   }
 }
 Wall {
-  translation 0.779999 0 1.8
+  translation 1.0386 0 0.80307
+  rotation 0 -1 0 1.5708
+  name "wall(8)"
+  size 0.9 0.2 0.05
+}
+Wall {
+  translation 1.5186 0 0.79307
+  rotation 0 -1 0 1.5708
+  name "wall(21)"
+  size 1 0.2 0.05
+}
+Wall {
+  translation 0.54 4.16751e-09 1.04
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(7)"
+  size 0.6 0.2 0.05
+}
+Wall {
+  translation 1.84 -3.13467e-06 1.66
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(28)"
+  size 0.4 0.2 0.05
+}
+Wall {
+  translation 2.35 -3.46182e-06 2.14
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(29)"
+  size 0.3 0.2 0.05
+}
+Wall {
+  translation 1.84 -6.4194e-06 0.8
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(31)"
+  size 0.3 0.2 0.05
+}
+Wall {
+  translation 2.07 -7.39371e-06 0.8
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(32)"
+  size 0.2 0.2 0.05
+}
+Wall {
+  translation 2.07 -9.03601e-06 0.37
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(33)"
+  size 0.2 0.2 0.05
+}
+Wall {
+  translation 1.96 -8.07356e-06 0.5
+  rotation -0.5627698194902024 -0.5419418261708323 -0.6241707997956877 6.78669e-06
+  name "wall(36)"
+  size 0.2 0.2 0.05
+}
+Wall {
+  translation 2.21 -1.01257e-05 0.24
+  rotation -0.5627698194902024 -0.5419418261708323 -0.6241707997956877 6.78669e-06
+  name "wall(37)"
+  size 0.25 0.2 0.05
+}
+Wall {
+  translation 2.35 -1.01077e-05 0.4
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(35)"
+  size 0.25 0.2 0.05
+}
+Wall {
+  translation 1.84 -8.10002e-06 0.36
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(39)"
+  size 0.225 0.2 0.05
+}
+Wall {
+  translation 2.069 -5.45689e-08 2.72039
+  rotation 1.238749999704326e-05 -0.9999999997613127 1.799789999570413e-05 -0.261795307179586
+  name "wall(17)"
+  size 0.55 0.2 0.05
+}
+Wall {
+  translation 2.06864 -8.00928e-07 2.52456
+  rotation -1.6623199996032464e-05 -0.9999999997613254 -1.4178099996616048e-05 0.261806
+  name "wall(24)"
+  size 0.55 0.2 0.05
+}
+Wall {
+  translation 2.07371 -1.66311e-06 2.30442
+  rotation -0.46460502672547577 -0.720148041425077 -0.5152950296413168 8.22069e-06
+  name "wall(25)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 2.06586 -2.89705e-06 1.97258
+  rotation -0.46460502672547577 -0.720148041425077 -0.5152950296413168 8.22069e-06
+  name "wall(26)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 2.11586 -4.33099e-06 1.65258
+  rotation -0.46460502672547577 -0.720148041425077 -0.5152950296413168 8.22069e-06
+  name "wall(27)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 2.10586 -1.05523e-05 0.0125799
+  rotation -0.46460502672547577 -0.720148041425077 -0.5152950296413168 8.22069e-06
+  name "wall(38)"
+  size 0.55 0.2 0.05
+}
+Wall {
+  translation 2.11586 -7.11905e-06 0.92258
+  rotation -0.46460502672547577 -0.720148041425077 -0.5152950296413168 8.22069e-06
+  name "wall(30)"
+  size 0.5 0.2 0.05
+}
+Wall {
+  translation 1.52 -1.36858e-07 2.09
+  rotation -4.027689999967243e-06 -0.9999999999918672 -2.0835399999830547e-07 1.5708
+  name "wall(18)"
+  size 0.6 0.2 0.05
+}
+Wall {
+  translation 1.22 0 0.32
+  rotation 0 -1 0 3.37201e-06
+  name "wall(15)"
+  size 0.6 0.2 0.05
+}
+Wall {
+  translation 0.55 0 2.43
+  rotation 0 -1 0 3.37201e-06
+  name "wall(16)"
+  size 2 0.2 0.05
+}
+Wall {
+  translation 0.759999 0 1.8
   rotation 0 -1 0 3.37201e-06
   name "wall(14)"
+  size 0.5 0.2 0.05
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 1 2.4
+    }
+  }
+}
+Wall {
+  translation -1.49 0 1.8
+  rotation 0 -1 0 3.37201e-06
+  name "wall(23)"
   size 0.4 0.2 0.05
   appearance Roughcast {
     colorOverride 1 0 0
@@ -110,10 +206,10 @@ Wall {
   }
 }
 Wall {
-  translation 1.33 0 1.64
+  translation 1.52 0 1.54
   rotation 0 1 0 1.57079
   name "wall(20)"
-  size 0.4 0.2 0.05
+  size 0.5 0.2 0.05
   appearance Roughcast {
     colorOverride 1 0 0
     textureTransform TextureTransform {
@@ -128,16 +224,22 @@ Wall {
   size 1.8 0.2 0.05
 }
 Wall {
-  translation -0.81 0 0.1
+  translation -1.21 0 0.459999
   rotation 0 1 0 -1.5707996938995747
-  name "wall(4)"
-  size 1.4 0.2 0.05
+  name "wall(22)"
+  size 1.7 0.2 0.05
 }
 Wall {
-  translation -1.21 0 0.16
+  translation -0.81 0 0.16
+  rotation 0 1 0 -1.5707996938995747
+  name "wall(4)"
+  size 1.3 0.2 0.05
+}
+Wall {
+  translation -1.21 0 -0.69
   rotation 0 1 0 -1.5707996938995747
   name "wall(5)"
-  size 2.3 0.2 0.05
+  size 0.6 0.2 0.05
   appearance Roughcast {
     colorOverride 1 0 0
     textureTransform TextureTransform {
@@ -165,6 +267,12 @@ Wall {
   translation -1.47 0 0.03
   name "wall(13)"
   size 0.45 0.2 0.05
+  appearance Roughcast {
+    colorOverride 0 1 0
+    textureTransform TextureTransform {
+      scale 1 2.4
+    }
+  }
 }
 Wall {
   translation -0.39 0 0.83
@@ -183,7 +291,7 @@ Wall {
   }
 }
 Wall {
-  translation -0.78 0 1.8
+  translation -0.39 0 1.8
   name "wall(11)"
   size 1.8 0.2 0.05
 }
@@ -197,13 +305,22 @@ TexturedBackground {
   luminosity 0.1
 }
 TinkerbotsBase {
-  translation -0.2 0.04 0.42
+  translation -0.2 0.04 -0.51
   rotation 0 1 0 0
   controller "Robot_controller"
   upSlot TinkerbotsCube {
     frontSlot TinkerbotsDistanceSensor {
       rotation 0 0 1 -3.141592653589793
       name "d_sensor"
+      upSlot TinkerbotsTwister {
+        slot Slot {
+          endPoint Camera {
+            translation -3.4641e-08 0.01 -0.00999998
+            rotation 0.5773489358556708 0.5773509358554485 -0.5773509358554485 2.0944
+            fieldOfView 0.1
+          }
+        }
+      }
     }
   }
   downSlot TinkerbotsCube {
@@ -245,10 +362,6 @@ TinkerbotsBase {
     }
   }
   extensionSlot [
-    Camera {
-      translation 0 0.04 0.05
-      rotation 1 0 0 3.14159
-    }
     Pen {
       inkColor 0 0 1
       inkDensity 1
@@ -258,13 +371,13 @@ TinkerbotsBase {
       rotation 0 1 0 -1.5707953071795862
     }
     DistanceSensor {
-      translation 1.24963e-07 0.04 0.06
-      rotation 0 -1 0 0.261797
+      translation 0.039691 0.04 0.0517245
+      rotation 0 -1 0 1.0472003061004251
       name "d_sensor_F_L"
     }
     DistanceSensor {
-      translation -0.000258068 0.04 0.0599984
-      rotation 0 -1 0 2.9118
+      translation -0.0418834 0.04 0.0490842
+      rotation 0 -1 0 2.126399693899575
       name "d_sensor_F_R"
     }
   ]
