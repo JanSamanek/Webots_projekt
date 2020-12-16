@@ -10,6 +10,7 @@
   d_sensor_F_L = wb_robot_get_device('d_sensor_F_L');
   d_sensor_F_R = wb_robot_get_device('d_sensor_F_R');
   camera = wb_robot_get_device('camera');
+  head = wb_robot_get_device('twister');
   
   write = true; 
   wb_pen_write(pen,write);
@@ -200,9 +201,13 @@ case 'back'
   wb_motor_set_velocity(right_back_motor, -motor_velocity);
 end
 
-wb_console_print(sprintf ('nelze uniknout!\n'), WB_STDOUT);
-disp('nelze uniknout!')
+wb_console_print(sprintf ('NELZE UNIKNOUT!\n'), WB_STDOUT);
+wb_console_print(sprintf ('POMOC! POMOC!\n'), WB_STDOUT);
+disp('NELZE UNIKNOUT!')
+disp('POMOC! POMOC!')
 orientace = 'stop';
+   wb_motor_set_position(head, inf);
+   wb_motor_set_velocity(head, 5);
 end
 
 if s > inf
